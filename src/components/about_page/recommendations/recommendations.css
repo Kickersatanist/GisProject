@@ -1,0 +1,24 @@
+.recommendations {
+    text-align: center;
+    background-color: #383267;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .recommendations_container {
+    width: 80%;
+    padding: 20px 0px;
+  }
+  
+  .recommendation_cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .recommendations h3{
+    font-size: 24px;
+    color: white;
+    text-align: left;
+  }
+  

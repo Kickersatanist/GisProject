@@ -1,0 +1,69 @@
+:root {
+	--medium-purple: #332f4d;
+	--dark-purple: #383267;
+	--light-purple: #9747ff;
+
+	--tr: 0.3s;
+}
+
+.card {
+	background-color: var(--medium-purple);
+	padding: 20px;
+	border-radius: 10px;
+	width: 280px;
+	text-align: center;
+	color: white;
+}
+
+.card img {
+	width: 100%;
+	max-height: 160px;
+	border-radius: 10px;
+}
+
+.card h4 {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 0px;
+}
+
+.card p {
+	font-size: 14px;
+	color: white;
+	margin-bottom: 20px;
+}
+
+.card button {
+	width: 100%;
+	background-color: #383267;
+	color: white;
+	font-size: 18px;
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+	box-shadow: 0px 10px 20px -10px #383267;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.card button::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background-color: #9747ff;
+	transition: all 0.4s;
+	border-radius: 10px;
+	z-index: -1;
+}
+
+.card button:hover::before {
+	width: 100%;
+}
+
+.rec-card-total-rate {
+	font-weight: bold;
+}

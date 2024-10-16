@@ -1,0 +1,40 @@
+.medium-purple__review {
+	background-color: var(--medium-purple);
+	background-position: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1300px;
+	border-radius: 20px;
+	height: 100%;
+}
+
+.main_review img {
+	height: 450px;
+	padding-left: 20px;
+	padding-right: 25px;
+	margin-top: 30px;
+	border-color: var(--medium-purple);
+}
+
+.main_rev {
+	padding-top: 25px;
+	padding-bottom: 50px;
+}
+
+.rest__mark {
+	font-size: 25px;
+}
+
+.rest__mark p {
+	color: white;
+	font-size: 30px;
+	text-align: right;
+}
+
+.main_rev {
+	zoom: 0.75;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}

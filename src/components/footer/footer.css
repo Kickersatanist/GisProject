@@ -1,0 +1,33 @@
+/* footer {
+	background-color: ;
+} */
+
+root {
+	--light-purple: #9747ff;
+	--dark-purple: #383267;
+
+	--tr: 0.3s;
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 60px;
+	font-size: 16px;
+	color: white;
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+.footer > p {
+	margin: 0;
+}
+.footer a {
+	color: white;
+	text-decoration: none;
+	transition: var(--tr);
+}
+.footer a:hover {
+	color: var(--light-purple);
+}

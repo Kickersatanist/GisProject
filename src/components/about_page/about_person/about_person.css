@@ -1,0 +1,42 @@
+.person_info {
+	text-align: center;
+	margin-top: 40px;
+	/* background-image: url('../../../img/background_main.jpg'); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	max-height: 600px;
+}
+
+.person_info img {
+}
+
+.avatar_root {
+	display: inline-flex;
+	align-items: center;
+	/* justify-content: center; */
+	background-color: var(--black-a3);
+}
+
+.avatar_image {
+	width: 500px;
+	height: 500px;
+	border-radius: 100%;
+	object-fit: cover;
+	border-radius: inherit;
+	user-select: none;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.person_info h3 {
+	font-size: 24px;
+	margin: 0;
+	color: #18162d;
+}
+
+.person_info p {
+	font-size: 20px;
+	color: #666;
+	margin-top: 10px;
+}

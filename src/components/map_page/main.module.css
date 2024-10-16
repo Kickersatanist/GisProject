@@ -1,0 +1,141 @@
+/* .about_info {
+	background-color: #383267;
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+	max-height: 220px;
+}
+.about_content {
+	width: 80%;
+	display: flex;
+	justify-content: space-around;
+}
+.about_content p {
+	font-size: 18px;
+	font-weight: 200;
+	color: white;
+	margin: 20px 0px;
+}
+
+.about_logo img {
+	position: relative;
+	top: -15px;
+	margin-left: 30px;
+} */
+
+:root {
+	--medium-purple: #332f4d;
+	--dark-purple: #383267;
+	--light-purple: #9747ff;
+
+	--tr: 0.3s;
+}
+
+.main__description {
+	color: whitesmoke;
+	font-size: 25px;
+}
+
+.map_main {
+	padding-top: 5px;
+	justify-content: space-between;
+	height: 100%;
+	max-height: 100%;
+	padding-bottom: 60px;
+}
+.main_cover img {
+	height: 700px;
+	border-radius: 30px;
+}
+
+/* BACKGROUND COLOR */
+
+.light-purple {
+	background-color: #332f4d;
+	background-position: center;
+	height: 100%;
+	align-self: center;
+}
+
+.zoom_control {
+	background-color: #383267;
+}
+
+/* MAP OVERLAY */
+
+.overlay__main {
+	background-color: #383267;
+	color: white;
+	border-radius: 20px;
+	width: 100%;
+	max-width: 350px;
+	height: 100%;
+	max-height: 500px;
+}
+
+.overlay__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.overlay__container a {
+}
+
+.overlay_title {
+	padding-left: 10%;
+	padding-right: 10%;
+	max-width: 100%;
+	word-wrap: break-word;
+}
+
+.overlay_img {
+	width: 80%;
+	border-radius: 20px;
+}
+
+.overlay_mark {
+	font-size: 20px;
+}
+
+.overlay_button {
+	width: 80%;
+	background-color: var(--medium-purple);
+	color: white;
+	margin-bottom: 20px;
+	font-size: 20px;
+	height: 50px;
+	border: 4px solid var(--medium-purple);
+	border-radius: 20px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 40px;
+}
+
+.overlay_button:hover {
+	border-color: var(--light-purple);
+	transition: 0.6s;
+	cursor: pointer;
+}
+
+.marker_overlay {
+	display: none;
+	opacity: 0;
+	translate: 0 -10vh;
+	transition-property: display opacity;
+	transition-duration: 1s;
+	transition-behavior: allow-discrete;
+}
+
+.overlay-active {
+	display: block;
+	opacity: 1;
+	translate: 0 0;
+
+	@starting-style {
+		opacity: 0;
+		translate: 0 -10vh;
+	}
+}

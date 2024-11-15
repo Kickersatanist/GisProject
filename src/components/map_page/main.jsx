@@ -3,7 +3,7 @@ import './main.css'
 import { Map, Marker, Overlay, ZoomControl } from 'pigeon-maps'
 import ikit from '../../img/ikit.svg'
 import { Link } from 'react-router-dom'
-import styles from './main.module.css'
+// import styles from './main.module.css'
 import clsx from 'clsx'
 
 const MAPTILER_ACCESS_TOKEN = 'RF9cHiswjIGfoqsh5AQs'
@@ -25,7 +25,8 @@ const MapMain = () => {
 	}
 
 	return (
-		<div className={clsx(styles.lightPurple)}>
+		// <div className={clsx(styles.lightPurple)}>
+		<div className='light-purple'>
 			<div className='container'>
 				<div className='map_main'>
 					<h1 className='title-h1'>Карта посещенных ресторанов</h1>

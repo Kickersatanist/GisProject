@@ -1,5 +1,5 @@
 const firstArray = [1, 2, 3, 4, 5]
-const secondArray = [3, 4, 5, 6]develop
+const secondArray = [3, 4, 5, 6]
 
 let unionArray = []
 

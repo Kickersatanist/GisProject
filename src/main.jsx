@@ -5,7 +5,7 @@ import '@/styles/index.css'
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
-		<div className='dark-purple'>
+		<div className='dark-purple bckgroundSite'>
 			<App />
 		</div>
 	</StrictMode>

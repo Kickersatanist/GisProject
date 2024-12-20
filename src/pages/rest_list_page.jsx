@@ -1,5 +1,6 @@
 import React from 'react'
 import AnimatedPage from '@/components/animated_page/animated_page'
+import { RestListPage } from '@/components/rest_list_page/rest_list_page'
 
 const RestList = () => {
 	return (
@@ -7,7 +8,7 @@ const RestList = () => {
 			<head>
 				<title>Список посещенных ресторанов</title>
 			</head>
-			<div>Это список ресторанов</div>;
+			<RestListPage />
 		</AnimatedPage>
 	)
 }

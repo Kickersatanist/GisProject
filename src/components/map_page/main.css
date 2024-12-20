@@ -50,7 +50,7 @@
 
 /* BACKGROUND COLOR */
 
-.light-purple {
+.lightPurple {
 	background-color: #332f4d;
 	background-position: center;
 	height: 100%;
@@ -63,7 +63,7 @@
 
 /* MAP OVERLAY */
 
-.overlay__main {
+.overlayMain {
 	background-color: #383267;
 	color: white;
 	border-radius: 20px;
@@ -73,7 +73,7 @@
 	max-height: 500px;
 }
 
-.overlay__container {
+.overlayContainer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -83,23 +83,23 @@
 .overlay__container a {
 }
 
-.overlay_title {
+.overlayTitle {
 	padding-left: 10%;
 	padding-right: 10%;
 	max-width: 100%;
 	word-wrap: break-word;
 }
 
-.overlay_img {
+.overlayImg {
 	width: 80%;
 	border-radius: 20px;
 }
 
-.overlay_mark {
+.overlayMark {
 	font-size: 20px;
 }
 
-.overlay_button {
+.overlayButton {
 	width: 80%;
 	background-color: var(--medium-purple);
 	color: white;
@@ -114,22 +114,23 @@
 	line-height: 40px;
 }
 
-.overlay_button:hover {
+.overlayButton:hover {
 	border-color: var(--light-purple);
 	transition: 0.6s;
 	cursor: pointer;
 }
 
-.marker_overlay {
+.markerOverlay {
 	display: none;
 	opacity: 0;
 	translate: 0 -10vh;
 	transition-property: display opacity;
 	transition-duration: 1s;
 	transition-behavior: allow-discrete;
+	min-width: 100%;
 }
 
-.overlay-active {
+.overlayActive {
 	display: block;
 	opacity: 1;
 	translate: 0 0;

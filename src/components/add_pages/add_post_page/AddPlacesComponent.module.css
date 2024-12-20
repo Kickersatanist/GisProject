@@ -1,0 +1,42 @@
+.markerOverlay {
+	display: none;
+	opacity: 0;
+	translate: 0 -10vh;
+	transition-property: display opacity;
+	transition-duration: 1s;
+	transition-behavior: allow-discrete;
+	min-width: 100%;
+}
+
+.overlayActive {
+	display: block;
+	opacity: 1;
+	translate: 0 0;
+
+	@starting-style {
+		opacity: 0;
+		translate: 0 -10vh;
+	}
+}
+
+.overlayText {
+	padding-left: 10%;
+	padding-right: 10%;
+	max-width: 100%;
+	word-wrap: break-word;
+}
+
+.overlayButton {
+	width: 80%;
+	background-color: var(--medium-purple);
+	color: white;
+	margin-bottom: 20px;
+	font-size: 20px;
+	height: 50px;
+	border: 4px solid var(--medium-purple);
+	border-radius: 20px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 40px;
+}

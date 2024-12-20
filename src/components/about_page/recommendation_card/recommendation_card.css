@@ -1,11 +1,3 @@
-:root {
-	--medium-purple: #332f4d;
-	--dark-purple: #383267;
-	--light-purple: #9747ff;
-
-	--tr: 0.3s;
-}
-
 .card {
 	background-color: var(--medium-purple);
 	padding: 20px;
@@ -30,6 +22,10 @@
 .card p {
 	font-size: 14px;
 	color: white;
+	margin-bottom: 20px;
+}
+
+.rest_rating {
 	margin-bottom: 20px;
 }
 

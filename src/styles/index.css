@@ -6,6 +6,15 @@
 	box-sizing: border-box;
 	font-family: 'Inter', sans-serif;
 }
+
+:root {
+	--medium-purple: #332f4d;
+	--dark-purple: #383267;
+	--light-purple: #9747ff;
+
+	--tr: 0.3s;
+}
+
 body {
 	margin: 0;
 	font-family: 'Inter', sans-serif;
@@ -19,6 +28,10 @@ body {
 }
 .dark-purple {
 	background-color: #18162d;
+}
+
+.bckgroundSite {
+	background-image: url('D:\Work\Study\4 course\7 семестр\GIS\gis-project-js\src\styles\index.css');
 }
 
 .title-h1 {

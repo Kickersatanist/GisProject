@@ -12,4 +12,4 @@ export const mapTiler = (
 	}.png?key=${MAPTILER_ACCESS_TOKEN}`
 }
 
-export const marker_color = ''
+export const marker_color = '#332f4d'

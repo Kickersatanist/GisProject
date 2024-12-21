@@ -6,6 +6,7 @@ import RestList from './pages/rest_list_page'
 import Footer from './components/footer/footer'
 import Restaurant from './pages/restaurant_page'
 import AddPlace from './pages/add_place_page'
+import AddPost from './pages/add_post_page'
 
 function App() {
 	return (
@@ -17,6 +18,7 @@ function App() {
 				<Route path='/rest_list' element={<RestList />} />
 				<Route path='/restaurant/:restaurantId' element={<Restaurant />} />
 				<Route path='/add_place/' element={<AddPlace />} />
+				<Route path='/add_post/' element={<AddPost />} />
 			</Routes>
 			<Footer />
 		</Router>

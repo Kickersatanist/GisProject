@@ -9,17 +9,20 @@ interface RatingValueProps {
 const RatingValue = memo(function RatingValue(props: RatingValueProps) {
 	const { value } = props
 	return (
-		<Box
-			sx={{
-				display: 'flex',
-				alignItems: 'center',
-				lineHeight: '24px',
-				color: 'text.secondary',
-			}}
-		>
-			<Rating value={value} precision={0.1} sx={{ mr: 1 }} readOnly />{' '}
+		// <Box
+		// 	sx={{
+		// 		display: 'flex',
+		// 		alignItems: 'center',
+		// 		lineHeight: '24px',
+		// 		color: 'text.secondary',
+		// 	}}
+		// >
+		<>
+			<Rating value={value} precision={0.1} sx={{ mr: 8 }} readOnly />{' '}
 			{Math.round(Number(value) * 10) / 10}
-		</Box>
+		</>
+
+		// </Box>
 	)
 })
 

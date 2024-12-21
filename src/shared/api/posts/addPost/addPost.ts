@@ -6,5 +6,5 @@ import { TypeAddPost } from './TypeAddPost'
 export const addPost = async (
 	args: TypeAddPost
 ): Promise<AxiosResponse<boolean>> => {
-	return instanceApi.post(`/posts/GetPostsByPlace`, args)
+	return instanceApi.post(`/posts/CreatePost`, args)
 }

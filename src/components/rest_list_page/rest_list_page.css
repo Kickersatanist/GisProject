@@ -1,5 +1,48 @@
 .rest_list_paper {
-	padding-top;
 	height: 100%;
 	background-color: var(--medium-purple);
+}
+
+.minHeight1080 {
+	min-height: 1080px;
+}
+
+.table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.table th,
+.table td {
+	border: 1px solid #ccc;
+	text-align: center;
+	padding: 10px;
+	width: calc(100% / 3);
+}
+
+.table__row {
+	margin-top: 50px;
+	cursor: pointer;
+}
+
+.table__column {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 15px;
+}
+
+/* .column__id {
+	display: none;
+} */
+
+.MuiPagination-root {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.MuiPagination-root button {
+	color: white !important;
 }

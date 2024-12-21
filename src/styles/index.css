@@ -18,6 +18,8 @@
 body {
 	margin: 0;
 	font-family: 'Inter', sans-serif;
+	color: white;
+	background-color: #18162d;
 }
 .container {
 	max-width: 1200px;
@@ -28,10 +30,6 @@ body {
 }
 .dark-purple {
 	background-color: #18162d;
-}
-
-.bckgroundSite {
-	background-image: url('D:\Work\Study\4 course\7 семестр\GIS\gis-project-js\src\styles\index.css');
 }
 
 .title-h1 {

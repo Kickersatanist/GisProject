@@ -19,12 +19,17 @@
 	}
 }
 
-.overlayText {
+.overlayDisabled {
+	display: none;
+}
+
+/* .overlayText {
 	padding-left: 10%;
 	padding-right: 10%;
 	max-width: 100%;
 	word-wrap: break-word;
-}
+	margin-top: 20px;
+} */
 
 .overlayButton {
 	width: 80%;
@@ -39,4 +44,7 @@
 	text-decoration: none;
 	font-weight: bold;
 	line-height: 40px;
+}
+
+.form {
 }

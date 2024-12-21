@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Rating } from '@mui/material'
 import { Favorite, FavoriteBorder, Style } from '@mui/icons-material'
 import { styled } from '@mui/material/styles'
+import { maxRating } from '@/shared/data'
 
 const StyledRating = styled(Rating)({
 	'& .MuiRating-iconFilled': {
@@ -21,8 +22,6 @@ const RecommendationCard = ({
 	id,
 	totalRating,
 }) => {
-	const maxRating = 5
-
 	return (
 		<div className='card'>
 			<img src={imgSrc} alt={title} />

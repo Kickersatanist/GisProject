@@ -1,4 +1,4 @@
-import { AddPlacesComponent } from '@/components/add_pages/add_post_page/AddPlacesComponent'
+import { AddPlacesComponent } from '@/components/add_pages/AddPlacesComponent/AddPlacesComponent'
 import AnimatedPage from '@/components/animated_page/animated_page'
 import { memo } from 'react'
 
@@ -6,9 +6,9 @@ const AddPlace = memo(() => {
 	return (
 		<AnimatedPage>
 			<head>
-				<title>Карта ресторанов</title>
+				<title>Добавить место</title>
 			</head>
-			<div className='add-post-page'></div>
+			<div className='add-place-page'></div>
 			<AddPlacesComponent></AddPlacesComponent>
 		</AnimatedPage>
 	)

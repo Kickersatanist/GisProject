@@ -7,13 +7,24 @@ import './main.css'
 import * as API from '@/shared/api/places'
 import { Skeleton } from '@mui/material'
 import { mapTiler, marker_color } from '@/shared/api/map_cfg/ConfigMap'
+import { maxRating } from '@/shared/data'
+import { Favorite, FavoriteBorder } from '@mui/icons-material'
+import { StyledRating } from '@/shared/components/CustomRating/StyledRating'
 
 const MapMain = () => {
 	const [isActive, setActive] = useState(false)
+	const [activeMarker, setActiveMarker] = useState<API.TypeVisitedPlace>()
 	const [visitedPlaces, setVisitedPlaces] = useState<API.TypeVisitedPlace[]>()
 	const [isLoading, setIsLoading] = useState(false)
 
-	const toggleClass = () => {
+	const toggleClass = (e: any) => {
+		const foundPlace = visitedPlaces?.find(
+			vp => vp.latitude === e.anchor[0] && vp.longitude === e.anchor[1]
+		)
+		setActiveMarker(foundPlace)
+		if (foundPlace !== activeMarker) {
+			return setActive(true)
+		}
 		setActive(!isActive)
 	}
 
@@ -22,7 +33,6 @@ const MapMain = () => {
 		API.getAllVisitedPlaces()
 			.then(response => {
 				setVisitedPlaces(response.data)
-				console.log([response.data[0].latitude, response.data[0].longitude])
 			})
 			.finally(() => {
 				setIsLoading(false)
@@ -55,21 +65,33 @@ const MapMain = () => {
 									onClick={toggleClass}
 								/>
 							))}
-							{visitedPlaces?.map(vp => (
+							{isActive ? (
 								<Overlay
 									className={`markerOverlay ${isActive ? 'overlayActive' : ''}`}
-									anchor={[vp.latitude, vp.longitude]}
+									anchor={[activeMarker!.latitude, activeMarker!.longitude]}
 									offset={[0, 0]}
 								>
 									<div className='overlayMain'>
 										<div className='overlayContainer'>
-											<h2 className='overlayTitle'>{vp.name}</h2>
+											<h2 className='overlayTitle'>{activeMarker?.name}</h2>
+											<p className='overlayDesc'>{activeMarker?.description}</p>
 											<img className='overlayImg' alt='' />
-											<p className='overlayMark'>Оценка: {vp.avgMark}/5</p>
+											<p className='overlayMark'>
+												<StyledRating
+													name='restaurantRating'
+													className='rest_rating'
+													precision={0.5}
+													value={activeMarker?.avgMark}
+													readOnly
+													max={maxRating}
+													icon={<Favorite fontSize='inherit' />}
+													emptyIcon={<FavoriteBorder fontSize='inherit' />}
+												></StyledRating>
+											</p>
 											<Link
-												to={`/restaurant/${vp.visitedPlaceId}`}
+												to={`/restaurant/${activeMarker?.visitedPlaceId}`}
 												className='overlayButton'
-												state={{ place: vp }}
+												state={{ place: activeMarker }}
 											>
 												Посмотреть
 												{/* <button className='overlay_button'>Посмотреть</button> */}
@@ -77,7 +99,9 @@ const MapMain = () => {
 										</div>
 									</div>
 								</Overlay>
-							))}
+							) : (
+								''
+							)}
 						</Map>
 					) : (
 						<Skeleton variant='rectangular' height={700}></Skeleton>
